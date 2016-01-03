@@ -164,4 +164,13 @@ window.onload = function () {
     }
 
 
+//    显示隐藏个人信息
+    g('my_message').onmousemove = function () {
+        show(g('my_message_box'));
+    }
+
+    g('my_message_box').onmouseout= function () {
+        hide(g('my_message_box'))
+    }
+
 }

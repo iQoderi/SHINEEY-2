@@ -584,9 +584,9 @@ body{
 }
 
 .my_message_box{
-    position: absolute;
-    height: 300px;
-    top: 26px;
+    position: relative;
+    height: 280px;
+    top: 0px;
     left: -135px;
     width: 260px;
     background: #E8E8E8;
@@ -633,6 +633,78 @@ body{
     font-size: 14px;
 }
 
+.my_mess_content{
+    height: 70px;
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #cccccc;
+    float: left;
+}
+
+.my_mess_content_detail{
+    height: 100%;
+    width: 100%;
+    float: left;
+}
+
+.my_mess_content .my_shequ,.my_mess_content .my_mooc {
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+    /*height: 100%;*/
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.my_mooc{
+    border-left: 1px solid #cccccc;
+}
+
+.my_mess_content_detail_2{
+    height: 70px;
+    width: 100%;
+    float: left;
+    border-bottom: 1px #E8E8E8;
+}
+
+.my_mess_content_detail_2 .tr{
+    width: 70%;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.my_mess_content_detail_2 .tr p {
+    padding-left: 10px;
+}
+.my_mess_content_detail_2 .td{
+    width: 30%;
+    box-sizing: border-box;
+    float: left;
+    padding-top: 20px;
+}
+
+.my_mess_content_detail_2 .td a{
+    color: #009CDF;
+}
+
+.my_mess_content_detail_3{
+    height: 38px;
+    line-height: 38px;
+    width: 100%;
+    color: #666;
+    border-top: 1px solid #cccccc;
+    float: left;
+}
+
+.my_mess_content_detail_3 .my_setting,.my_mess_content_detail_3 .my_exit{
+    float: left;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+    cursor: pointer;
+}
 
 
 
