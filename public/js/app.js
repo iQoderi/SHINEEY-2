@@ -169,7 +169,7 @@ window.onload = function () {
         show(g('my_message_box'));
     }
 
-    g('my_message_box').onmouseout= function () {
+    g('my_message_box').onmouseleave= function () {
         hide(g('my_message_box'))
     }
 
