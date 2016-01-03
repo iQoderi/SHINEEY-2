@@ -621,12 +621,16 @@ body{
 }
 
 .message h3{
-    padding-left: 20px;
+    margin-top: 10px;
     height: 40px;
     box-sizing: border-box;
     line-height: 40px;
     color: #FFFFFF;
     font-size: 20px;
+}
+.message span{
+    color: #E8E8E8;
+    font-size: 14px;
 }
 
 
