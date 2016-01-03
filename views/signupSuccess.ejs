@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>注册成功</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .signup_succ_tit{
+            padding: 10px;
+        }
+
+        #succ_time{
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .back{
+            margin: 10px;
+            height: 20px;
+            line-height: 20px;
+            width: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<p class="signup_succ_tit">注册成功<span id="succ_time">５秒</span>后自动返回首页</p>
+<button class="back">返回首页</button>
+<script>
+    window.onload= function () {
+        var timer=null;
+        var count=5;
+        timer=setInterval(function () {
+            count--;
+            document.getElementById('succ_time').innerText=count+'秒';
+            if (count==0){
+                clearInterval(timer);
+                count=0;
+                window.location.pathname='/';
+                console.log('called');
+            }
+        },1000);
+
+        document.getElementsByClassName('back')[0].onclick= function () {
+            window.location.pathname='/';
+        }
+    }
+</script>
+</body>
+</html>
