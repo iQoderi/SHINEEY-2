@@ -28,7 +28,7 @@ router.post('/login', function (req, res, next) {
         });
     });
     console.log(data);
-    res.redirect('/')
+    res.redirect('/');
 });
 
 router.post('/signup', function (req, res, next) {

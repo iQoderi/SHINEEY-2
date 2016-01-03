@@ -136,6 +136,7 @@ window.onload = function () {
             Ajax('POST', '/users/login', senddata);
             hide(g('mask'));
             hide(g('login_signup'));
+            //window.location.pathname='/'
         } else {
             alert('登陆失败');
         }

@@ -589,7 +589,46 @@ body{
     top: 26px;
     left: -135px;
     width: 260px;
-    background: #cccccc;
+    background: #E8E8E8;
     z-index: 99998;
 }
+
+.my_message_box .my_mess_tit{
+    height: 100px;
+    width: 100%;
+    background-color: #CC0000;
+}
+
+.avatar{
+    width:50%;
+    height: 100%;
+    float: left;
+}
+
+.avatar_show{
+    height: 70px;
+    width: 70px;
+    margin: 10px auto;
+    border-radius: 70px;
+    background: url("../img/no-img_mid_.jpg") no-repeat;
+    background-size: cover;
+}
+.message{
+    width: 50%;
+    height: 100%;
+    float: left;
+
+}
+
+.message h3{
+    padding-left: 20px;
+    height: 40px;
+    box-sizing: border-box;
+    line-height: 40px;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+
+
 

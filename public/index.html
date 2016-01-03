@@ -26,7 +26,7 @@
     </div>
     <div class="login_signup_content">
         <div class="login_content" id="login_content">
-            <form name="login_form"onsubmit="return false">
+            <form name="login_form" onsubmit="return false">
                 <p>
                     <label for="login_username" style="color: #666">用户名:</label>
                     <input type="text" placeholder="请输入用户名" id="login_username"
@@ -45,7 +45,7 @@
             </form>
         </div>
         <div class="signup_content" id="signup_content" style="display:none;">
-            <form name="login_form"  onsubmit="return false">
+            <form name="login_form" onsubmit="return false">
                 <p>
                     <label for="signup_username" style="color: #666">用户名:</label>
                     <input type="text" placeholder="请输入用户名" id="signup_username"
@@ -92,11 +92,16 @@
             <li><a href="javascript:;" id="login_signup_btn">登陆/注册</a></li>
             <li class="my_mess_tab">
                 <a href="javascript:;" id="my_message">我的信息</a>
+
                 <div class="my_message_box">
-                    <div class="avatar"></div>
-                    <div class="message">
-                        <h3 class="name"></h3>
-                        <span class="jingyan">经验</span>
+                    <div class="my_mess_tit">
+                        <div class="avatar">
+                            <div class="avatar_show"></div>
+                        </div>
+                        <div class="message">
+                            <h3 class="name" id="name">Qoder</h3>
+                            <span class="jingyan">经验：9999</span>
+                        </div>
                     </div>
                 </div>
             </li>
