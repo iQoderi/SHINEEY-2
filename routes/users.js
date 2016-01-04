@@ -35,16 +35,19 @@ router.post('/signup', function (req, res, next) {
     var data = req.body;
     data.avatar = "https://secure.gravatar.com/avatar/" + data.email + "?=s=48";
     db.open(function (err, db) {
-        if (err){
+        if (err) {
             console.log('mongodb err');
         }
         db.collection('uers', function (err, collection) {
             collection.insert(data, function (err, doc) {
-                console.log(doc);
                 db.close();
             })
         });
     });
+    res.send('haha');
+});
+
+router.get('/signupSuccess', function (req, res, next) {
     res.render('signupSuccess');
 });
 

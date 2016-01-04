@@ -4,11 +4,7 @@
 window.onload = function () {
     //封装获取DOM函数
     var g = function (id) {
-        //if (/^#/.test(id)){
         return document.getElementById(id);
-        //}else{
-        //    console.log(id+'输入有误');
-        //}
     }
 
     var show = function (node) {
@@ -113,12 +109,11 @@ window.onload = function () {
         }
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                console.log('haha');
+                show(g('my_mess_tab'));
             }
         }
         xmlhttp.open(method, url, async);
         xmlhttp.setRequestHeader("Content-type", "application/json");
-
         if (method === 'POST') {
             xmlhttp.send(data)
         } else {
@@ -136,11 +131,12 @@ window.onload = function () {
             Ajax('POST', '/users/login', senddata);
             hide(g('mask'));
             hide(g('login_signup'));
-            //window.location.pathname='/'
+            g('name').innerHTML = data.username;
+            g('avatar_show').style.background='url("https://secure.gravatar.com/avatar/" + data.email + "?=s=48")';
         } else {
             alert('登陆失败');
         }
-        console.log(senddata);
+
     }
 
 
@@ -157,10 +153,10 @@ window.onload = function () {
             Ajax('POST', '/users/signup', senddata);
             hide(g('mask'));
             hide(g('login_signup'));
+            window.location.pathname = 'users/signupSuccess';
         } else {
             alert('注册失败');
         }
-        console.log(senddata);
     }
 
 
@@ -169,8 +165,12 @@ window.onload = function () {
         show(g('my_message_box'));
     }
 
-    g('my_mess_wrapper').onmouseleave= function () {
+    g('my_mess_wrapper').onmouseleave = function () {
         hide(g('my_message_box'))
     }
 
+    g('my_exit').onclick= function () {
+        hide(g('my_mess_tab'));
+        console.log('called');
+    }
 }

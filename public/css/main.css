@@ -673,6 +673,7 @@ body{
     float: left;
     box-sizing: border-box;
     padding: 10px;
+    padding-left: 15px;
 }
 
 .my_mess_content_detail_2 .tr p {
